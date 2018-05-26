@@ -1,16 +1,16 @@
-﻿using System.Collections;
+﻿using Shapes2D;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptableShape : MonoBehaviour {
+public class ScriptableShape : ScriptableObject {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Shape shape;
+
+    public void setTypeShape(ShapeType type)
+    {
+        shape.settings.shapeType = type;
+    }
+
+
 }
